@@ -1,0 +1,25 @@
+{
+  "name": "fable-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "fable",
+    "watch": "fable -w --target watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fable-compiler": "^0.5.2",
+    "fable-import-react": "^0.5.0",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "core-js": "^2.4.1",
+    "fable-core": "^0.5.2",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
+  }
+}

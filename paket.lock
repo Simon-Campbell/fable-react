@@ -1,0 +1,4 @@
+NUGET
+  remote: http://api.nuget.org/v3/index.json
+  specs:
+    FAKE (4.36.0)
