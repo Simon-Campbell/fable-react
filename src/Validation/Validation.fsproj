@@ -5,13 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>d0b6de95-a6ae-46bf-b089-3805114e79d5</ProjectGuid>
+    <ProjectGuid>9d551669-639a-4550-b038-e81ad7534171</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>FableReact</RootNamespace>
-    <AssemblyName>FableReact</AssemblyName>
+    <RootNamespace>Validation</RootNamespace>
+    <AssemblyName>Validation</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.3.1.0</TargetFSharpCoreVersion>
-    <Name>FableReact</Name>
+    <Name>Validation</Name>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +21,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\FableReact.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Validation.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\FableReact.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Validation.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -42,14 +42,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="../node_modules/fable-core/Fable.Core.dll" />
-    <Compile Include="../node_modules/fable-import-react/Fable.Import.React.fs" />
-    <Compile Include="../node_modules/fable-import-react/Fable.Helpers.React.fs" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ValidationResult.fs" />
-    <Compile Include="UserDetails.fs" />
-    <Compile Include="FableReact.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

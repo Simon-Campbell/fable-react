@@ -1,7 +1,7 @@
 {
     "module": "commonjs",
     "sourceMaps": true,
-    "projFile": "./src/FableReact.fsproj",
+    "projFile": "./src/Client/Client.fsproj",
     "outDir": "temp",
     "scripts": {
         "prebuild": "npm install",

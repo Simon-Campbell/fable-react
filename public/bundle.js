@@ -132,30 +132,6 @@
 	
 	_fableCore.Util.setInterfaces(UserDetails.prototype, ["FSharpRecord", "System.IEquatable", "System.IComparable"], "UserDetails.UserDetails");
 	
-	function validateErrors(entity) {
-	    var err = function (name) {
-	        return function (msg) {
-	            return new _ValidationResult.ValidationPropertyMessage(name, msg);
-	        };
-	    };
-	
-	    return _fableCore.Seq.delay(function (unitVar) {
-	        return _fableCore.Seq.append(_fableCore.Seq.isEmpty(entity.FirstName) ? _fableCore.Seq.singleton(err("FirstName")("No first name")) : _fableCore.Seq.empty(), _fableCore.Seq.delay(function (unitVar_1) {
-	            return _fableCore.Seq.isEmpty(entity.LastName) ? _fableCore.Seq.singleton(err("LastName")("No last name")) : _fableCore.Seq.empty();
-	        }));
-	    });
-	}
-	
-	function validate(entity) {
-	    var errors = validateErrors(entity);
-	
-	    if (_fableCore.Seq.isEmpty(errors)) {
-	        return new _ValidationResult.ValidationResult("OK", []);
-	    } else {
-	        return new _ValidationResult.ValidationResult("Error", [errors]);
-	    }
-	}
-	
 	var FormProps = exports.FormProps = function () {
 	    function FormProps(_default) {
 	        _classCallCheck(this, FormProps);
@@ -179,6 +155,30 @@
 	}();
 	
 	_fableCore.Util.setInterfaces(FormProps.prototype, ["FSharpRecord", "System.IEquatable", "System.IComparable"], "UserDetails.FormProps");
+	
+	function validateErrors(entity) {
+	    var err = function (name) {
+	        return function (msg) {
+	            return new _ValidationResult.ValidationPropertyMessage(name, msg);
+	        };
+	    };
+	
+	    return _fableCore.Seq.delay(function (unitVar) {
+	        return _fableCore.Seq.append(_fableCore.Seq.isEmpty(entity.FirstName) ? _fableCore.Seq.singleton(err("FirstName")("No first name")) : _fableCore.Seq.empty(), _fableCore.Seq.delay(function (unitVar_1) {
+	            return _fableCore.Seq.isEmpty(entity.LastName) ? _fableCore.Seq.singleton(err("LastName")("No last name")) : _fableCore.Seq.empty();
+	        }));
+	    });
+	}
+	
+	function validate(entity) {
+	    var errors = validateErrors(entity);
+	
+	    if (_fableCore.Seq.isEmpty(errors)) {
+	        return new _ValidationResult.ValidationResult("OK", []);
+	    } else {
+	        return new _ValidationResult.ValidationResult("Error", [errors]);
+	    }
+	}
 	
 	function validateCss(state, field) {
 	    var matchValue = validate(state);
@@ -211,7 +211,7 @@
 	        };
 	        var _this_1 = _this2;
 	        _this2.contents = _this2;
-	        _this2["init@50"] = 1;
+	        _this2["init@55"] = 1;
 	        _this2.contents.state = props.Default;
 	        return _this2;
 	    }

@@ -1,16 +1,18 @@
-module FableReact
+module Client
     open System
 
     open Fable.Core
     open Fable.Import
+    
+    open Fable.Helpers.React
 
     open UserDetails
 
-    // Ensure that newer JS langiage shims are available for older 
+    // Ensure that newer JS language shims are available for older 
     // browsers
     Node.require.Invoke("core-js") |> ignore
 
-    module R = Fable.Helpers.React
+    
 
     let user = { 
                 Id = 0
@@ -23,6 +25,6 @@ module FableReact
     ReactDom.render(
         // R.com is rendering a React component, this was a bug bear where
         // it was hard to discover this API
-        R.com<UserDetails.Form, _, _> props [], 
+        com<UserDetails.Form, _, _> props [], 
         Browser.document.getElementById "main"
     ) |> ignore
