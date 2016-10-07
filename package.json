@@ -11,15 +11,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "fable-compiler": "^0.5.2",
-    "fable-import-react": "^0.5.0",
+    "fable-compiler": "^0.5.11",
+    "fable-import-react": "^0.5.2",
     "source-map-loader": "^0.1.5",
     "webpack": "^1.13.1"
   },
   "dependencies": {
     "core-js": "^2.4.1",
-    "fable-core": "^0.5.2",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "fable-core": "^0.5.5",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   }
 }
